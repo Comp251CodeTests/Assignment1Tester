@@ -120,6 +120,7 @@ public class MiniTester {
 		long duration = (endTime - startTime);
 		if(c.Table.equals(Expected))System.out.println("The insertKey(int key) method in Chaining.java matches the expected results");
 		else{
+			System.out.println("The insertKey(int key) method in Chaining.java doesn't match the expected results");
 			System.out.println("Table before insertion: \n" + c.Table + "\n");
 			System.out.println("Table after insertion using chain: \n" + c.Table + "\n");
 		}
@@ -154,7 +155,8 @@ public class MiniTester {
 			System.out.println("Testing for [1,2,3,1,1]...\nOutput: " + a1_real.silence(positions4) + "\nExpected: 1");
 			passedAll=false;
 		}
-		if(passedAll)System.out.println("Passed all the test of the silence method"+ "\n");
+		if(passedAll)System.out.println("Passed all the tests of the silence method"+ "\n");
+		else {System.out.println("Failed some/all the tests of the silence method"+ "\n");}
 	}
 
 	public static void main(String[] args) {

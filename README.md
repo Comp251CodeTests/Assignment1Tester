@@ -1,4 +1,4 @@
-#if someone could test this branch and let me know wheter the expected results match what you are getting it would be great. If you do test it let me know so that I can merge to the main branch
+# if someone could test this branch and let me know wheter the expected results match what you are getting it would be great. If you do test it let me know so that I can merge to the main branch
 
 # Assignment 1 Tester
 ## Don't share any of your code

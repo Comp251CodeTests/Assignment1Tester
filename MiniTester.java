@@ -52,6 +52,7 @@ public class MiniTester {
 			System.out.println("Output of the insertion of Open_Addressing.java matches the expected results");
 		}
 		else {
+			System.out.println("Output of insertKey(int key) of Open_Addressing.java doesn't match the expected results");
 			System.out.println("Expected result: \n" + Arrays.toString(expected) + "\n");
 			System.out.println("Table after insertion using probe: \n" + Arrays.toString(oa.Table) + "\n");
 		}

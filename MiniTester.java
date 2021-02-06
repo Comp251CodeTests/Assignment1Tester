@@ -107,7 +107,7 @@ public class MiniTester {
         if(c.Table.equals(Expected) || c.Table.equals ( alternateExpected ))System.out.println("The insertKey(int key) method in Chaining.java matches the expected results");
         else{
             System.out.println("The insertKey(int key) method in Chaining.java doesn't match the expected results");
-            System.out.println("Table before insertion: \n" + c.Table + "\n");
+            System.out.println("Expected result: \n" + Expected + "\n");
             System.out.println("Table after insertion using chain: \n" + c.Table + "\n");
         }
         System.out.println("Time duration to fill table: " + duration + " ns" + "\n");

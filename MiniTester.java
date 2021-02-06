@@ -84,34 +84,14 @@ public class MiniTester {
 
 		ArrayList<ArrayList<Integer>>  Expected = new ArrayList<>();
 
+		int[][] ExpectedMatrix = {{20}, {19}, {}, {18}, {17}, {}, {16}, {}, {15}, {14}, {}, {13}, {12}, {32}, {31, 11}, {}, {30, 10}, {29, 9}, {}, {28, 8}, {27, 7}, {}, {26, 6}, {}, {25, 5}, {24, 4}, {}, {23, 3}, {22, 2}, {}, {21, 1}, {}};
 
-		//Mix of code from stack Overflow to convert the output String to ArrayList<ArrayList<Integer>>
-		// it's horrible and ineffective but at least it works
-		String s="[[20], [19], [], [18], [17], [], [16], [], [15], [14], [], [13], [12], [32], [31, 11], [], [30, 10], [29, 9], [], [28, 8], [27, 7], [], [26, 6], [], [25, 5], [24, 4], [], [23, 3], [22, 2], [], [21, 1], []]";
-		s=s.replace("[","");//replacing all [ to ""
-		s=s.substring(0,s.length()-2);//ignoring last two ]]
-		String s1[]=s.split("],");//separating all by "],"
-
-		String my_matrics[][] = new String[s1.length][s1.length];//declaring two dimensional matrix for input
-
-		for(int i=0;i<s1.length;i++){
-			s1[i]=s1[i].trim();//ignoring all extra space if the string s1[i] has
-			String single_int[]=s1[i].split(", ");//separating integers by ", "
-
-			for(int j=0;j<single_int.length;j++){
-				my_matrics[i][j]=single_int[j];//adding single values
-			}
-		}
-
-		for(int i=0;i<s1.length;i++){
+		for(int i = 0; i < ExpectedMatrix.length; i++) {
 			Expected.add(new ArrayList<Integer>());
-			for(int j=0;j<s1.length;j++)
-			{if(my_matrics[i][j]!=null&&my_matrics[i][j]!="")
-				Expected.get(i).add(Integer.parseInt(my_matrics[i][j]));
+			for(int j = 0; j < ExpectedMatrix[i].length; j++) {
+				Expected.get(i).add(ExpectedMatrix[i][j]);
 			}
 		}
-
-
 
 		long startTime = System.nanoTime();
 		// Insert integers from 1 to 32 into table using chain

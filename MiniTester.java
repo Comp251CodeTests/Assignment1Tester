@@ -169,12 +169,12 @@ public class MiniTester {
         }
         if (a1_real.silence(positions5) != 0)
         {
-            System.out.println("Testing for empty array...\nOutput: " + a1_real.silence(positions4) + "\nExpected: 0");
+            System.out.println("Testing for empty array...\nOutput: " + a1_real.silence(positions5) + "\nExpected: 0");
             passedAll=false;
         }
         if (a1_real.silence(positions6) != 1)
         {
-            System.out.println("Testing for [2]...\nOutput: " + a1_real.silence(positions4) + "\nExpected: 1");
+            System.out.println("Testing for [2]...\nOutput: " + a1_real.silence(positions6) + "\nExpected: 1");
             passedAll=false;
         }
 
